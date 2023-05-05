@@ -1,0 +1,62 @@
+<view class="container">
+  <loading hidden="{{loadingHide}}">
+    {{loadingText}}
+  </loading>
+
+  <view class="title">留言详情</view>
+  <view class="leaveword_detail_view"> 
+      <view class="viewItem">
+        <view class="label">留言id：</view>
+        <view class="content">
+          <view>{{leaveWordId}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">留言标题：</view>
+        <view class="content"> 
+          <view>{{leaveTitle}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">留言内容：</view>
+        <view class="content"> 
+          <view>{{leaveContent}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">留言人：</view>
+        <view class="content"> 
+          <view>{{userObj}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">留言时间：</view>
+        <view class="content"> 
+          <view>{{leaveTime}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">管理回复：</view>
+        <view class="content"> 
+          <view>{{replyContent}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">回复时间：</view>
+        <view class="content"> 
+          <view>{{replyTime}}</view>
+        </view>
+      </view>
+
+      <view>
+        <navigator class="btnReturn" open-type="navigateBack" hover-class="navigator-hover">返回</navigator>
+      </view>
+
+  </view>
+</view>

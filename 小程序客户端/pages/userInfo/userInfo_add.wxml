@@ -1,0 +1,97 @@
+<view class="container">
+  <loading hidden="{{loadingHide}}">
+    {{loadingText}}
+  </loading>
+  <view class="title">添加用户</view>
+
+  <view class="userInfo_add_view">
+    <form bindsubmit="formSubmit">
+      <view class="formItem">
+        <view class="label">用户名：</view>
+        <view class="formControl">
+          <input type="text" name="userInfo.user_name" placeholder="请输入用户名" value="{{user_name}}" />
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">登录密码：</view>
+        <view class="formControl">
+          <input type="text" name="userInfo.password" placeholder="请输入登录密码" value="{{password}}" />
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">姓名：</view>
+        <view class="formControl">
+          <input type="text" name="userInfo.name" placeholder="请输入姓名" value="{{name}}" />
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">性别：</view>
+        <view class="formControl">
+          <input type="text" name="userInfo.gender" placeholder="请输入性别" value="{{gender}}" />
+        </view>
+      </view>
+
+       <view class="formItem">
+        <view class="label">出生日期：</view>
+        <view class="formControl">
+          <picker mode="date"  start="1970-01-01" end="2030-01-01" value="{{birthDate}}" bindchange="bind_birthDate_change" >
+            <view style="display:flex;border:1px solid green;">
+              <input style="width:90%;border:0px;" name="userInfo.birthDate" placeholder="选择出生日期"  value="{{birthDate}}"></input>
+              <text class="clearButton" catchtap="clear_birthDate">x</text>
+            </view>
+          </picker>
+        </view>
+      </view>
+
+       <view class="formItem">
+        <view class="label">用户照片：</view>
+        <view class="formControl" bindtap="select_userPhoto">
+          <input type="text" hidden="true" name="userInfo.userPhoto" value="{{userPhoto}}" />
+          <image wx:for="{{userPhotoList}}" class="uploadPic" mode="aspectFill" src="{{item}}" wx:key=""></image>
+          <image src="../../images/upic.png" class="uploadPic" mode="widthFix"></image>
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">联系电话：</view>
+        <view class="formControl">
+          <input type="text" name="userInfo.telephone" placeholder="请输入联系电话" value="{{telephone}}" />
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">邮箱：</view>
+        <view class="formControl">
+          <input type="text" name="userInfo.email" placeholder="请输入邮箱" value="{{email}}" />
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">家庭地址：</view>
+        <view class="formControl">
+          <input type="text" name="userInfo.address" placeholder="请输入家庭地址" value="{{address}}" />
+        </view>
+      </view>
+
+       <view class="formItem">
+        <view class="label">注册时间：</view>
+        <view class="formControl">
+          <picker mode="date"  start="1970-01-01" end="2030-01-01" value="{{regTime}}" bindchange="bind_regTime_change" >
+            <view style="display:flex;border:1px solid green;">
+              <input style="width:90%;border:0px;" name="userInfo.regTime" placeholder="选择注册时间"  value="{{regTime}}"></input>
+              <text class="clearButton" catchtap="clear_regTime">x</text>
+            </view>
+          </picker>
+        </view>
+      </view>
+
+      <view>
+        <button class="vBtn_ok" formType="submit" disabled="{{disabled}}">提交发布</button>
+      </view>
+
+    </form>
+  </view>
+</view>

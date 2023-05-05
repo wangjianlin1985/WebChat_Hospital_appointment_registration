@@ -1,0 +1,93 @@
+<view class="container">
+  <loading hidden="{{loadingHide}}">
+    {{loadingText}}
+  </loading>
+
+  <view class="title">医生信息详情</view>
+  <view class="doctor_detail_view"> 
+      <view class="viewItem">
+        <view class="label">医生工号：</view>
+        <view class="content">
+          <view>{{doctorNumber}}</view>
+        </view>
+      </view>
+
+      
+       <view class="viewItem">
+        <view class="label">所在科室：</view>
+        <view class="content"> 
+          <view>{{departmentObj}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">医生姓名：</view>
+        <view class="content"> 
+          <view>{{doctorName}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">性别：</view>
+        <view class="content"> 
+          <view>{{sex}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">医生照片：</view>
+        <view class="content"> 
+          <image mode="aspectFill" src="{{doctorPhotoUrl}}"></image>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">入职日期：</view>
+        <view class="content"> 
+          <view>{{birthDate}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">医生职位：</view>
+        <view class="content"> 
+          <view>{{position}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">工作经验：</view>
+        <view class="content"> 
+          <view>{{experience}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">联系方式：</view>
+        <view class="content"> 
+          <view>{{contactWay}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">擅长：</view>
+        <view class="content"> 
+          <view>{{goodAt}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">医生介绍：</view>
+        <view class="content"> 
+          <view>{{doctorDesc}}</view>
+        </view>
+      </view>
+      <view>
+        <button class="vBtn_ok" formType="submit" catchtap="addOrder">预约此医生</button>
+      </view>
+      <view>
+        <navigator class="btnReturn" open-type="navigateBack" hover-class="navigator-hover">返回</navigator>
+      </view>
+
+  </view>
+</view>

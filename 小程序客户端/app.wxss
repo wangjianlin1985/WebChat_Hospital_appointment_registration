@@ -1,0 +1,127 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  background-color: #ffffff;
+  font-family: "Microsoft YaHei","Helvetica Neue","Hiragino Sans GB","\9ED1\4F53",Arial,sans-serif;
+} 
+.footer{
+  width: 100%;   font-size: 12px;
+  text-align: center;
+  color: #C6C6C6;
+  padding-top: 30rpx
+}
+.navigator-hover{
+  background: none
+}
+
+
+
+.clearButton{
+  display: block;
+  float: left;
+  text-align: center;
+  font-size: 12px;
+  height:20px;
+  width:16px;
+  background-color: lightcoral;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff; 
+}
+
+
+.mr_5 {
+  margin-right: 5px;
+}
+.mr_10 {
+ margin-right: 10px;
+}
+
+.mt_10 {
+    margin-top: 10px;
+}
+.font_10 {
+  font-size: 10px;
+}
+
+.font_12 {
+  font-size: 12px;
+}
+
+.op-btn {
+  color: #fff;
+  background: #008B8B
+}
+
+.del-btn {
+  color: #fff;
+  background: orangered;
+}
+
+.fl_r {
+  float: right;
+}
+
+
+.arrow-r{
+  margin-top: 20rpx;
+  width: 9rpx;
+  height: 17rpx;
+  margin-left: 10rpx;
+}
+
+.uploadPic{
+  width: 25%;
+  height: 120rpx;
+  margin-right:20rpx;
+}
+
+.vBtn_ok{
+  border: 0;
+  height: 80rpx;
+  background-color: crimson;
+  color: #fff;
+  margin-top: 30rpx; 
+  margin-bottom: 50rpx; 
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.loading{
+  padding: 80rpx 0;
+  color: #999;
+}
+
+.loadingImg{
+  width: 100%;
+  padding-bottom: 10rpx;
+  text-align: center
+}
+
+.loadingImg image{
+  width: 20px;
+  height: 20px
+}
+
+.loadingTxt{
+  width: 100%;
+  text-align: center;
+  color: #999
+}
+
+.nodata_view{ 
+  color: #999; 
+  padding: 20rpx 0 40rpx 0; 
+  width: 100%; 
+  text-align: center
+}

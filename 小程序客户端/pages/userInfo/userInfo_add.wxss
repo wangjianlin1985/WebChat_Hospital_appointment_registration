@@ -1,0 +1,71 @@
+.title {
+  width: 100%;
+  margin-top: 0px;
+  padding: 20rpx;
+  font-family: "微软雅黑";
+  font-weight: bold;
+  font-size: 36rpx;
+  color: #fff;
+  background: rgb(63, 180, 125);
+  text-align: center;
+}
+
+.userInfo_add_view {
+  width: 95%;
+}
+
+.userInfo_add_view form {
+  display: flex;
+  flex-direction: column;
+}
+
+.userInfo_add_view .formItem {
+  display: flex;
+  flex-direction: row;
+  line-height: 35rpx;
+  margin-top: 20rpx;
+  justify-content: center;
+  font-size: 35rpx;
+  align-items: flex-start;
+}
+
+.userInfo_add_view .label {
+  flex: 2; 
+  text-align: right;
+  font-weight: bold;
+}
+
+.userInfo_add_view .formControl {
+  flex: 5; 
+  margin-right: 20rpx;
+  flex-direction: row;
+}
+
+.userInfo_add_view .formControl input {
+  border: 1px solid olive;
+  padding: 2px;
+}
+
+.userInfo_add_view .formControl textarea {
+  width: 95%;
+  border: 1px solid olive;
+  padding: 15rpx;
+  margin-right: 20rpx;
+}
+
+.userInfo_add_view .formControl .fileNameView {
+  padding: 20rpx 0rpx;
+  line-height: 50rpx;
+  text-decoration: underline;
+}
+
+.userInfo_add_view .formControl .upfileBtn {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid olive; 
+  font-size: 32rpx;
+  padding:20rpx;
+  border-radius: 15rpx;
+}
+

@@ -1,0 +1,75 @@
+<view class="container">
+  <loading hidden="{{loadingHide}}">
+    {{loadingText}}
+  </loading>
+  <view class="title">添加病人信息</view>
+
+  <view class="patient_add_view">
+    <form bindsubmit="formSubmit">
+      <view class="formItem">
+        <view class="label">医生：</view>
+        <view class="formControl">
+          <picker bindchange="bind_doctorObj_change" value="{{doctorObj_Index}}" range-key="doctorName" range="{{doctors}}">
+            <view style="display:flex;border:1px solid green;">
+              <input hidden="true" name="patient.doctorObj.doctorNumber" value="{{doctors[doctorObj_Index].doctorNumber}}" />
+              <input style="width:90%;border:0px;" value="{{doctors[doctorObj_Index].doctorName}}"></input>
+              <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+            </view>
+          </picker> 
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">病人姓名：</view>
+        <view class="formControl">
+          <input type="text" name="patient.patientName" placeholder="请输入病人姓名" value="{{patientName}}" />
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">性别：</view>
+        <view class="formControl">
+          <input type="text" name="patient.sex" placeholder="请输入性别" value="{{sex}}" />
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">身份证号：</view>
+        <view class="formControl">
+          <input type="text" name="patient.cardNumber" placeholder="请输入身份证号" value="{{cardNumber}}" />
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">联系电话：</view>
+        <view class="formControl">
+          <input type="text" name="patient.telephone" placeholder="请输入联系电话" value="{{telephone}}" />
+        </view>
+      </view>
+
+      <view class="formItem" style="align-items:flex-start;">
+        <view class="label">病人病例：</view>
+        <view class="formControl">
+           <textarea placeholder="请输入病人病例" maxlength="800" name="patient.illnessCase" value="{{illnessCase}}" />
+        </view>
+      </view>
+
+       <view class="formItem">
+        <view class="label">登记时间：</view>
+        <view class="formControl">
+          <picker mode="date"  start="1970-01-01" end="2030-01-01" value="{{addTime}}" bindchange="bind_addTime_change" >
+            <view style="display:flex;border:1px solid green;">
+              <input style="width:90%;border:0px;" name="patient.addTime" placeholder="选择登记时间"  value="{{addTime}}"></input>
+              <text class="clearButton" catchtap="clear_addTime">x</text>
+            </view>
+          </picker>
+        </view>
+      </view>
+
+      <view>
+        <button class="vBtn_ok" formType="submit" disabled="{{disabled}}">提交发布</button>
+      </view>
+
+    </form>
+  </view>
+</view>

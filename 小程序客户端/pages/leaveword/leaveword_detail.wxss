@@ -1,0 +1,61 @@
+.title {
+  width: 100%;
+  margin-top: 0px;
+  padding: 20rpx;
+  font-family: "微软雅黑";
+  font-weight: bold;
+  font-size: 36rpx;
+  color: #fff;
+  background: rgb(63, 180, 125);
+  text-align: center;
+}
+
+.leaveword_detail_view { 
+  width: 95%; 
+}
+
+.leaveword_detail_view .viewItem {
+  display: flex;
+  flex-direction: row;
+  line-height: 40rpx;
+  margin-top: 20rpx;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 35rpx;
+}
+
+.leaveword_detail_view .label {
+  flex: 2; 
+  text-align: right;
+  font-weight: bold;
+}
+
+.leaveword_detail_view .content {
+  flex: 5; 
+  margin-right: 20rpx;
+  flex-direction: row;
+}
+
+.leaveword_detail_view .content image {
+  width: 100%; 
+  margin-right: 20rpx;
+}
+
+.leaveword_detail_view .content .fileView {
+  padding: 0rpx 0rpx 20rpx 0rpx;
+  line-height: 50rpx;
+  text-decoration: underline;
+}
+
+.btnReturn{
+  border: 0;
+  height: 80rpx;
+  background-color: blueviolet;
+  color: #fff;
+  margin-top: 30rpx; 
+  margin-bottom: 50rpx; 
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

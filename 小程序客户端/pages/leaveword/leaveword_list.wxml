@@ -1,0 +1,69 @@
+<view class="container">
+  <view class="toggleQview" bindtap="toggleQueryViewHide" style="padding:5px;">显示或隐藏查询视图</view>
+  <view class="queryView" hidden="{{queryViewHidden}}">
+    <view class="queryParams">
+      <view class="queryItem">
+        <view class="label">留言标题：</view>
+        <view class="searchControl"><input data-id="leaveTitle" placeholder="请输入留言标题关键字" value="{{leaveTitle}}" bindinput="searchValueInput" /></view>
+      </view>
+
+      <view class="queryItem" style="display:none;">
+        <view class="label">留言人：</view>
+        <view class="searchControl">
+          <picker bindchange="bind_userObj_change" value="{{userObj_Index}}" range-key="name" range="{{userInfos}}">
+            <view class="value" name="types">
+              <input style="width:75%;display:inline-block;float:left;" value="{{userInfos[userObj_Index].name}}"></input>
+              <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+            </view>
+          </picker> 
+        </view>
+      </view>
+
+      <view class="queryItem">
+        <view class="label">留言时间：</view>
+         <view class="searchControl">
+          <picker mode="date" value="{{leaveTime}}" start="1970-01-01" end="2030-01-01" bindchange="bind_leaveTime_change" >
+            <view>
+              <input style="width:75%;display:inline-block;float:left;" placeholder="选择留言时间" value="{{leaveTime}}"></input>
+              <text class="clearButton" catchtap="clear_leaveTime">x</text>
+            </view>
+          </picker> 
+        </view>
+      </view>
+
+    </view>
+
+    <view class="queryButton">
+       <button class="font_12 fl_r op-btn mr_10" bindtap="queryLeaveword">查询</button>
+    </view>
+  </view>
+
+  <view class="leavewordList">
+  <block wx:for-items="{{leavewords}}" wx:key="{{index}}">
+    <view class="leavewordItem">
+        <navigator url="leaveword_detail?leaveWordId={{item.leaveWordId}}" hover-class="navigator-hover">
+        <view class="leavewordText">
+          <view>留言标题：{{item.leaveTitle}}</view>
+          <view>留言人：{{item.userObj.name}}</view>
+          <view>留言时间：{{item.leaveTime}}</view>
+        </view>
+        </navigator>
+    </view>
+    <view class="opt_view" >
+      <button class="font_12 fl_r del-btn mr_10" bindtap="removeLeaveword" data-leavewordid="{{item.leaveWordId}}">删除</button> 
+      <navigator url="leaveword_modify?leaveWordId={{item.leaveWordId}}" hover-class="navigator-hover" style="display:none;">
+        <button class="font_12 fl_r op-btn mr_10">编辑</button>
+      </navigator>
+    </view>
+  </block>
+  </view>
+
+  <view hidden="{{loading_hide}}" class="loading">
+    <view class="loadingImg"><image src="/images/loading.gif" mode="aspectFill"></image></view>
+    <view class="loadingTxt">..加载中..</view>
+  </view>
+  <view class="nodata_view" hidden="{{nodata_hide}}">
+    <image src="/images/Noline.png" mode="widthFix"></image>
+  </view>
+</view>
+

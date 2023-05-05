@@ -1,0 +1,98 @@
+/**index.wxss**/
+
+
+swiper {
+  width: 100%;
+  height: 421.5rpx;
+}
+
+swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+
+
+.title {
+  width: 100%;
+  margin-top: 0px;
+  padding: 20rpx;
+  font-family: "微软雅黑";
+  font-weight: bold;
+  font-size: 36rpx;
+  color: #fff;
+  background: rgb(63, 180, 125);
+  text-align: center;
+}
+
+
+
+.doctorList {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  display: flex; 
+  margin-top: 0rpx;
+}
+
+.doctorItem {
+  padding:20rpx 20rpx 20rpx 5rpx;
+  width: 95%;
+  height: auto;
+  border-top: 1rpx solid #ededed;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+}
+
+.doctorItem .doctorImg {
+  flex: 2;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  text-align: right;
+}
+
+.doctorItem .doctorImg image { 
+  width: 180rpx;
+  height: 180rpx; 
+}
+
+.doctorItem navigator {
+  flex:5;
+  display: flex; 
+  flex-direction: column;
+}
+
+.doctorItem .doctorText view {
+    line-height: 60rpx;
+    padding-left: 30rpx;
+}
+
+
+
+
+

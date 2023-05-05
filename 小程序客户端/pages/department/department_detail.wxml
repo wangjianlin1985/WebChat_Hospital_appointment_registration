@@ -1,0 +1,48 @@
+<view class="container">
+  <loading hidden="{{loadingHide}}">
+    {{loadingText}}
+  </loading>
+
+  <view class="title">科室信息详情</view>
+  <view class="department_detail_view"> 
+      <view class="viewItem">
+        <view class="label">科室id：</view>
+        <view class="content">
+          <view>{{departmentId}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">科室名称：</view>
+        <view class="content"> 
+          <view>{{departmentName}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">科室介绍：</view>
+        <view class="content"> 
+          <view>{{departmentDesc}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">成立日期：</view>
+        <view class="content"> 
+          <view>{{birthDate}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">负责人：</view>
+        <view class="content"> 
+          <view>{{chargeMan}}</view>
+        </view>
+      </view>
+
+      <view>
+        <navigator class="btnReturn" open-type="navigateBack" hover-class="navigator-hover">返回</navigator>
+      </view>
+
+  </view>
+</view>

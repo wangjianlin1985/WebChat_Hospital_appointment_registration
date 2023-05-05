@@ -1,0 +1,129 @@
+.toggleQview {
+  width: 100%;
+  margin: 0px;
+  padding: 20rpx;
+  font-family: "微软雅黑";
+  font-weight: bold;
+  font-size: 36rpx;
+  color: #fff;
+  background: rgb(63, 180, 125);
+  text-align: center;
+  position:  fixed;
+  left: 0; top: 0;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+
+.queryView {
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx 20rpx 20rpx 20rpx;
+  position:  fixed;
+  left: 0; top: 75rpx;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  background-color: #fff;
+}
+
+.queryView .queryParams{
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+}
+
+.queryView .queryParams .queryItem {
+  display: flex;
+  flex-direction: row;
+}
+
+.queryView .queryParams .queryItem .label { 
+  flex: 2; 
+  text-align: right;
+  color: lightcoral;
+}
+
+.queryView .queryParams .queryItem .searchControl {
+  flex: 4;
+  margin-right: 10px;
+}
+
+.queryView .queryParams .queryItem .searchControl input {
+  width: 95%;
+  height: 10rpx;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 1% 2.5%;
+  margin-right: 5px;
+  border: none;
+}
+
+.queryView .queryButton {
+  font-size: 12px;
+  flex:1;
+}
+
+.queryView .queryButton button {
+  line-height: 30px; 
+  text-align: center;
+  border: none;
+}
+
+.arrow-r {
+  width: 9rpx;
+  height: 17rpx;
+  margin-left: 10rpx;
+}
+
+.leavewordList {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  display: flex; 
+  margin-top: 70rpx;
+}
+
+.leavewordItem {
+  padding:20rpx 20rpx 20rpx 5rpx;
+  width: 95%;
+  height: auto;
+  border-top: 1rpx solid #ededed;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+}
+
+.leavewordItem .leavewordImg {
+  flex: 2;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  text-align: right;
+}
+
+.leavewordItem .leavewordImg image { 
+  width: 180rpx;
+  height: 180rpx; 
+}
+
+.leavewordItem navigator {
+  flex:5;
+  display: flex; 
+  flex-direction: column;
+}
+
+.leavewordItem .leavewordText view {
+    line-height: 60rpx;
+    padding-left: 30rpx;
+}
+
+.opt_view {
+  display:block;
+  width: 100%;
+  margin-top: 2px; 
+  margin-bottom: 8px;
+}
+
+ .opt_view button {
+   width: 55px;
+ }

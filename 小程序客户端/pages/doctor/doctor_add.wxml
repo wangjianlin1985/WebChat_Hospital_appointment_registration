@@ -1,0 +1,112 @@
+<view class="container">
+  <loading hidden="{{loadingHide}}">
+    {{loadingText}}
+  </loading>
+  <view class="title">添加医生信息</view>
+
+  <view class="doctor_add_view">
+    <form bindsubmit="formSubmit">
+      <view class="formItem">
+        <view class="label">医生工号：</view>
+        <view class="formControl">
+          <input type="text" name="doctor.doctorNumber" placeholder="请输入医生工号" value="{{doctorNumber}}" />
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">登录密码：</view>
+        <view class="formControl">
+          <input type="text" name="doctor.password" placeholder="请输入登录密码" value="{{password}}" />
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">所在科室：</view>
+        <view class="formControl">
+          <picker bindchange="bind_departmentObj_change" value="{{departmentObj_Index}}" range-key="departmentName" range="{{departments}}">
+            <view style="display:flex;border:1px solid green;">
+              <input hidden="true" name="doctor.departmentObj.departmentId" value="{{departments[departmentObj_Index].departmentId}}" />
+              <input style="width:90%;border:0px;" value="{{departments[departmentObj_Index].departmentName}}"></input>
+              <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+            </view>
+          </picker> 
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">医生姓名：</view>
+        <view class="formControl">
+          <input type="text" name="doctor.doctorName" placeholder="请输入医生姓名" value="{{doctorName}}" />
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">性别：</view>
+        <view class="formControl">
+          <input type="text" name="doctor.sex" placeholder="请输入性别" value="{{sex}}" />
+        </view>
+      </view>
+
+       <view class="formItem">
+        <view class="label">医生照片：</view>
+        <view class="formControl" bindtap="select_doctorPhoto">
+          <input type="text" hidden="true" name="doctor.doctorPhoto" value="{{doctorPhoto}}" />
+          <image wx:for="{{doctorPhotoList}}" class="uploadPic" mode="aspectFill" src="{{item}}" wx:key=""></image>
+          <image src="../../images/upic.png" class="uploadPic" mode="widthFix"></image>
+        </view>
+      </view>
+
+       <view class="formItem">
+        <view class="label">出生日期：</view>
+        <view class="formControl">
+          <picker mode="date"  start="1970-01-01" end="2030-01-01" value="{{birthDate}}" bindchange="bind_birthDate_change" >
+            <view style="display:flex;border:1px solid green;">
+              <input style="width:90%;border:0px;" name="doctor.birthDate" placeholder="选择出生日期"  value="{{birthDate}}"></input>
+              <text class="clearButton" catchtap="clear_birthDate">x</text>
+            </view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">医生职位：</view>
+        <view class="formControl">
+          <input type="text" name="doctor.position" placeholder="请输入医生职位" value="{{position}}" />
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">工作经验：</view>
+        <view class="formControl">
+          <input type="text" name="doctor.experience" placeholder="请输入工作经验" value="{{experience}}" />
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">联系方式：</view>
+        <view class="formControl">
+          <input type="text" name="doctor.contactWay" placeholder="请输入联系方式" value="{{contactWay}}" />
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">擅长：</view>
+        <view class="formControl">
+          <input type="text" name="doctor.goodAt" placeholder="请输入擅长" value="{{goodAt}}" />
+        </view>
+      </view>
+
+      <view class="formItem" style="align-items:flex-start;">
+        <view class="label">医生介绍：</view>
+        <view class="formControl">
+           <textarea placeholder="请输入医生介绍" maxlength="800" name="doctor.doctorDesc" value="{{doctorDesc}}" />
+        </view>
+      </view>
+
+      <view>
+        <button class="vBtn_ok" formType="submit" disabled="{{disabled}}">提交发布</button>
+      </view>
+
+    </form>
+  </view>
+</view>

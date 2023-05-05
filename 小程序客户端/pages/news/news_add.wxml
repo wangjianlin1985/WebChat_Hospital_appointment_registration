@@ -1,0 +1,57 @@
+<view class="container">
+  <loading hidden="{{loadingHide}}">
+    {{loadingText}}
+  </loading>
+  <view class="title">添加新闻信息</view>
+
+  <view class="news_add_view">
+    <form bindsubmit="formSubmit">
+      <view class="formItem">
+        <view class="label">新闻标题：</view>
+        <view class="formControl">
+          <input type="text" name="news.newsTitle" placeholder="请输入新闻标题" value="{{newsTitle}}" />
+        </view>
+      </view>
+
+       <view class="formItem">
+        <view class="label">新闻图片：</view>
+        <view class="formControl" bindtap="select_newsPhoto">
+          <input type="text" hidden="true" name="news.newsPhoto" value="{{newsPhoto}}" />
+          <image wx:for="{{newsPhotoList}}" class="uploadPic" mode="aspectFill" src="{{item}}" wx:key=""></image>
+          <image src="../../images/upic.png" class="uploadPic" mode="widthFix"></image>
+        </view>
+      </view>
+
+      <view class="formItem" style="align-items:flex-start;">
+        <view class="label">新闻内容：</view>
+        <view class="formControl">
+           <textarea placeholder="请输入新闻内容" maxlength="800" name="news.newsContent" value="{{newsContent}}" />
+        </view>
+      </view>
+
+       <view class="formItem">
+        <view class="label">新闻日期：</view>
+        <view class="formControl">
+          <picker mode="date"  start="1970-01-01" end="2030-01-01" value="{{newsDate}}" bindchange="bind_newsDate_change" >
+            <view style="display:flex;border:1px solid green;">
+              <input style="width:90%;border:0px;" name="news.newsDate" placeholder="选择新闻日期"  value="{{newsDate}}"></input>
+              <text class="clearButton" catchtap="clear_newsDate">x</text>
+            </view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">新闻来源：</view>
+        <view class="formControl">
+          <input type="text" name="news.newsFrom" placeholder="请输入新闻来源" value="{{newsFrom}}" />
+        </view>
+      </view>
+
+      <view>
+        <button class="vBtn_ok" formType="submit" disabled="{{disabled}}">提交发布</button>
+      </view>
+
+    </form>
+  </view>
+</view>

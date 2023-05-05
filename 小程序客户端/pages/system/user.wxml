@@ -1,0 +1,37 @@
+<view class="container">
+  <view  class="userinfo">
+    <image  open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover"></image>
+<button  open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"style="with:100%;height:50px;display:none;">显示头像</button>
+    <text class="userinfo-nickname">{{nickName}}</text>
+  </view>
+  <view class="usermotto">
+  
+    <navigator class="list_a" url="../orderInfo/orderInfo_list">
+        我的预约记录
+    </navigator>
+    
+    <navigator class="list_a" url="../leaveword/leaveword_userAdd">
+       我要留言
+    </navigator>
+    <navigator class="list_a" url="../leaveword/leaveword_list">
+        我的留言列表
+    </navigator>
+    <navigator class="list_a" url="../news/news_list">
+        新闻信息列表
+    </navigator>
+
+     
+    <navigator class="list_a" url="../userInfo/userInfo_modify">
+       修改个人信息
+    </navigator>
+    <navigator class="list_b" url="../system/lianx">
+        联系我们
+    </navigator>
+    <navigator class="list_b" url="../system/about">
+        关于我们
+    </navigator>
+  </view>
+  <view class="footer">
+    @2021 版权所有
+  </view>
+</view>

@@ -1,0 +1,81 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/system/user",
+    "pages/system/about",
+    "pages/system/lianx",
+    "pages/department/department_add",
+    "pages/department/department_detail",
+    "pages/department/department_list",
+    "pages/department/department_modify",
+    "pages/doctor/doctor_add",
+    "pages/doctor/doctor_detail",
+    "pages/doctor/doctor_list",
+    "pages/doctor/doctor_modify",
+    "pages/patient/patient_add",
+    "pages/patient/patient_detail",
+    "pages/patient/patient_list",
+    "pages/patient/patient_modify",
+    "pages/orderInfo/orderInfo_add",
+    "pages/orderInfo/orderInfo_detail",
+    "pages/orderInfo/orderInfo_list",
+    "pages/orderInfo/orderInfo_modify",
+    "pages/news/news_add",
+    "pages/news/news_detail",
+    "pages/news/news_list",
+    "pages/news/news_modify",
+    "pages/leaveword/leaveword_add",
+    "pages/leaveword/leaveword_userAdd",
+    "pages/leaveword/leaveword_detail",
+    "pages/leaveword/leaveword_list",
+    "pages/leaveword/leaveword_modify",
+    "pages/userInfo/userInfo_add",
+    "pages/userInfo/userInfo_detail",
+    "pages/userInfo/userInfo_list",
+    "pages/userInfo/userInfo_modify",
+    "pages/mobile/mobile",
+    "pages/orderInfo/orderInfo_user_add"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "小程序客户端",
+    "navigationBarBackgroundColor": "#00AC2C",
+    "backgroundColor": "#EEEEEE",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#b7b7b7",
+    "selectedColor": "#00AC2C",
+    "borderStyle": "white",
+    "backgroundColor": "#f5f5f5",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icons/icon_home.png",
+        "selectedIconPath": "images/icons/icon_home_selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/department/department_list",
+        "iconPath": "images/icons/icon_cate.png",
+        "selectedIconPath": "images/icons/icon_cate_selected.png",
+        "text": "科室信息"
+      },
+      {
+        "pagePath": "pages/doctor/doctor_list",
+        "iconPath": "images/icons/icon_cart.png",
+        "selectedIconPath": "images/icons/icon_cart_selected.png",
+        "text": "医生信息"
+      },
+      {
+        "pagePath": "pages/system/user",
+        "iconPath": "images/icons/icon_member.png",
+        "selectedIconPath": "images/icons/icon_member_selected.png",
+        "text": "个人"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

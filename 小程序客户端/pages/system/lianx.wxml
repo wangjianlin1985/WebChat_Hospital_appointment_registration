@@ -1,0 +1,29 @@
+<!--pages/about/about.wxml-->
+<loading hidden="{{loadingHide}}">
+  {{loadingText}}
+</loading>
+<view class="IndexHome">
+  <image src="../../images/logo.png" mode="widthFix" class="img"></image>
+</view>
+
+<view class="IndexList">
+  <view bindtap="callmeTap">
+    <image src="../../images/tel.png" class="telIco" mode="widthFix"></image>
+    <text class="tel">电话 / 028-8239**24</text>
+  </view>
+  <view>
+    <image src="../../images/weixin.png" class="weixinIco" mode="widthFix"></image>
+    <text class="map">微信 / 136-3430-3121</text>
+  </view>
+  <view>
+    <image src="../../images/email.png" class="eIco" mode="widthFix"></image>
+    <text class="email">邮件 / dashen@126.com</text>
+  </view>
+  <view>
+    <image src="../../images/map.png" class="mapIco" mode="widthFix"></image>
+    <text class="map">四川省成都市成华区**路</text>
+  </view>
+</view>
+<view class="footer">
+  @2020 互联创想 版权所有
+</view>

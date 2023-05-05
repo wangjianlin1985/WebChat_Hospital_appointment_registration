@@ -1,0 +1,80 @@
+<view class="container">
+  <view class="toggleQview" bindtap="toggleQueryViewHide" style="padding:5px;">显示或隐藏查询视图</view>
+  <view class="queryView" hidden="{{queryViewHidden}}">
+    <view class="queryParams">
+      <view class="queryItem">
+        <view class="label">医生工号：</view>
+        <view class="searchControl"><input data-id="doctorNumber" placeholder="请输入医生工号关键字" value="{{doctorNumber}}" bindinput="searchValueInput" /></view>
+      </view>
+
+      <view class="queryItem">
+        <view class="label">所在科室：</view>
+        <view class="searchControl">
+          <picker bindchange="bind_departmentObj_change" value="{{departmentObj_Index}}" range-key="departmentName" range="{{departments}}">
+            <view class="value" name="types">
+              <input style="width:75%;display:inline-block;float:left;" value="{{departments[departmentObj_Index].departmentName}}"></input>
+              <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+            </view>
+          </picker> 
+        </view>
+      </view>
+
+      <view class="queryItem">
+        <view class="label">医生姓名：</view>
+        <view class="searchControl"><input data-id="doctorName" placeholder="请输入医生姓名关键字" value="{{doctorName}}" bindinput="searchValueInput" /></view>
+      </view>
+
+      <view class="queryItem">
+        <view class="label">入职日期：</view>
+         <view class="searchControl">
+          <picker mode="date" value="{{birthDate}}" start="1970-01-01" end="2030-01-01" bindchange="bind_birthDate_change" >
+            <view>
+              <input style="width:75%;display:inline-block;float:left;" placeholder="选择出生日期" value="{{birthDate}}"></input>
+              <text class="clearButton" catchtap="clear_birthDate">x</text>
+            </view>
+          </picker> 
+        </view>
+      </view>
+
+    </view>
+
+    <view class="queryButton">
+       <button class="font_12 fl_r op-btn mr_10" bindtap="queryDoctor">查询</button>
+    </view>
+  </view>
+
+  <view class="doctorList">
+  <block wx:for-items="{{doctors}}" wx:key="{{index}}">
+    <view class="doctorItem">
+        <view class="doctorImg">
+          <image src="{{item.doctorPhotoUrl}}"></image>
+        </view>
+        <navigator url="doctor_detail?doctorNumber={{item.doctorNumber}}" hover-class="navigator-hover">
+        <view class="doctorText">
+          <view>医生工号：{{item.doctorNumber}}</view>
+          <view>所在科室：{{item.departmentObj.departmentName}}</view>
+          <view>医生姓名：{{item.doctorName}}</view>
+          <view>性别：{{item.sex}}</view>
+          <view>医生职位：{{item.position}}</view>
+          <view>工作经验：{{item.experience}}</view>
+        </view>
+        </navigator>
+    </view>
+    <view class="opt_view" style="display:none;">
+      <button class="font_12 fl_r del-btn mr_10" bindtap="removeDoctor" data-doctornumber="{{item.doctorNumber}}">删除</button> 
+      <navigator url="doctor_modify?doctorNumber={{item.doctorNumber}}" hover-class="navigator-hover">
+        <button class="font_12 fl_r op-btn mr_10">编辑</button>
+      </navigator>
+    </view>
+  </block>
+  </view>
+
+  <view hidden="{{loading_hide}}" class="loading">
+    <view class="loadingImg"><image src="/images/loading.gif" mode="aspectFill"></image></view>
+    <view class="loadingTxt">..加载中..</view>
+  </view>
+  <view class="nodata_view" hidden="{{nodata_hide}}">
+    <image src="/images/Noline.png" mode="widthFix"></image>
+  </view>
+</view>
+

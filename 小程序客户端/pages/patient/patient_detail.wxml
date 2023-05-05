@@ -1,0 +1,69 @@
+<view class="container">
+  <loading hidden="{{loadingHide}}">
+    {{loadingText}}
+  </loading>
+
+  <view class="title">病人信息详情</view>
+  <view class="patient_detail_view"> 
+      <view class="viewItem">
+        <view class="label">病人id：</view>
+        <view class="content">
+          <view>{{patientId}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">医生：</view>
+        <view class="content"> 
+          <view>{{doctorObj}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">病人姓名：</view>
+        <view class="content"> 
+          <view>{{patientName}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">性别：</view>
+        <view class="content"> 
+          <view>{{sex}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">身份证号：</view>
+        <view class="content"> 
+          <view>{{cardNumber}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">联系电话：</view>
+        <view class="content"> 
+          <view>{{telephone}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">病人病例：</view>
+        <view class="content"> 
+          <view>{{illnessCase}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">登记时间：</view>
+        <view class="content"> 
+          <view>{{addTime}}</view>
+        </view>
+      </view>
+
+      <view>
+        <navigator class="btnReturn" open-type="navigateBack" hover-class="navigator-hover">返回</navigator>
+      </view>
+
+  </view>
+</view>

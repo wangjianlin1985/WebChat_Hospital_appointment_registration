@@ -1,0 +1,73 @@
+<view class="container">
+  <loading hidden="{{loadingHide}}">
+    {{loadingText}}
+  </loading>
+  <view class="title">发布留言</view>
+
+  <view class="leaveword_add_view">
+    <form bindsubmit="formSubmit">
+      <view class="formItem">
+        <view class="label">留言标题：</view>
+        <view class="formControl">
+          <input type="text" name="leaveword.leaveTitle" placeholder="请输入留言标题" value="{{leaveTitle}}" />
+        </view>
+      </view>
+
+      <view class="formItem" style="align-items:flex-start;">
+        <view class="label">留言内容：</view>
+        <view class="formControl">
+           <textarea placeholder="请输入留言内容" maxlength="800" name="leaveword.leaveContent" value="{{leaveContent}}" />
+        </view>
+      </view>
+
+      <view class="formItem" style="display:none;">
+        <view class="label">留言人：</view>
+        <view class="formControl">
+          <picker bindchange="bind_userObj_change" value="{{userObj_Index}}" range-key="name" range="{{userInfos}}">
+            <view style="display:flex;border:1px solid green;">
+              <input hidden="true" name="leaveword.userObj.user_name" value="{{userInfos[userObj_Index].user_name}}" />
+              <input style="width:90%;border:0px;" value="{{userInfos[userObj_Index].name}}"></input>
+              <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+            </view>
+          </picker> 
+        </view>
+      </view>
+
+       <view class="formItem" style="display:none;">
+        <view class="label">留言时间：</view>
+        <view class="formControl">
+          <picker mode="date"  start="1970-01-01" end="2030-01-01" value="{{leaveTime}}" bindchange="bind_leaveTime_change" >
+            <view style="display:flex;border:1px solid green;">
+              <input style="width:90%;border:0px;" name="leaveword.leaveTime" placeholder="选择留言时间"  value="{{leaveTime}}"></input>
+              <text class="clearButton" catchtap="clear_leaveTime">x</text>
+            </view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="formItem" style="align-items:flex-start;display:none;">
+        <view class="label">管理回复：</view>
+        <view class="formControl">
+           <textarea placeholder="请输入管理回复" maxlength="800" name="leaveword.replyContent" value="{{replyContent}}" />
+        </view>
+      </view>
+
+       <view class="formItem" style="display:none;">
+        <view class="label">回复时间：</view>
+        <view class="formControl">
+          <picker mode="date"  start="1970-01-01" end="2030-01-01" value="{{replyTime}}" bindchange="bind_replyTime_change" >
+            <view style="display:flex;border:1px solid green;">
+              <input style="width:90%;border:0px;" name="leaveword.replyTime" placeholder="选择回复时间"  value="{{replyTime}}"></input>
+              <text class="clearButton" catchtap="clear_replyTime">x</text>
+            </view>
+          </picker>
+        </view>
+      </view>
+
+      <view>
+        <button class="vBtn_ok" formType="submit" disabled="{{disabled}}">提交发布</button>
+      </view>
+
+    </form>
+  </view>
+</view>

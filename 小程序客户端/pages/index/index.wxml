@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<view class="container">
+   <swiper indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true">
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" width="100%"/>
+            </swiper-item>
+        </block>
+    </swiper>
+  
+    <view class="title">最新加入医生</view> 
+    <view class="doctorList">
+  <block wx:for-items="{{doctors}}" wx:key="{{index}}">
+    <view class="doctorItem">
+        <view class="doctorImg">
+          <image src="{{item.doctorPhotoUrl}}"></image>
+        </view>
+        <navigator url="../doctor/doctor_detail?doctorNumber={{item.doctorNumber}}" hover-class="navigator-hover">
+        <view class="doctorText">
+          <view>医生工号：{{item.doctorNumber}}</view>
+          <view>所在科室：{{item.departmentObj.departmentName}}</view>
+          <view>医生姓名：{{item.doctorName}}</view>
+          <view>性别：{{item.sex}}</view>
+          <view>医生职位：{{item.position}}</view>
+          <view>工作经验：{{item.experience}}</view>
+        </view>
+        </navigator>
+    </view> 
+  </block>
+  </view>
+
+
+  
+  <view hidden="{{loading_hide}}" class="loading">
+    <view class="loadingImg"><image src="/images/loading.gif" mode="aspectFill"></image></view>
+    <view class="loadingTxt">..加载中..</view>
+  </view>
+
+
+
+  
+  <!--
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+
+
+  
+</view>

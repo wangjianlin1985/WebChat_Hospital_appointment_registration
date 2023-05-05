@@ -1,0 +1,48 @@
+<view class="container">
+  <loading hidden="{{loadingHide}}">
+    {{loadingText}}
+  </loading>
+  <view class="title">添加科室信息</view>
+
+  <view class="department_add_view">
+    <form bindsubmit="formSubmit">
+      <view class="formItem">
+        <view class="label">科室名称：</view>
+        <view class="formControl">
+          <input type="text" name="department.departmentName" placeholder="请输入科室名称" value="{{departmentName}}" />
+        </view>
+      </view>
+
+      <view class="formItem" style="align-items:flex-start;">
+        <view class="label">科室介绍：</view>
+        <view class="formControl">
+           <textarea placeholder="请输入科室介绍" maxlength="800" name="department.departmentDesc" value="{{departmentDesc}}" />
+        </view>
+      </view>
+
+       <view class="formItem">
+        <view class="label">成立日期：</view>
+        <view class="formControl">
+          <picker mode="date"  start="1970-01-01" end="2030-01-01" value="{{birthDate}}" bindchange="bind_birthDate_change" >
+            <view style="display:flex;border:1px solid green;">
+              <input style="width:90%;border:0px;" name="department.birthDate" placeholder="选择成立日期"  value="{{birthDate}}"></input>
+              <text class="clearButton" catchtap="clear_birthDate">x</text>
+            </view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">负责人：</view>
+        <view class="formControl">
+          <input type="text" name="department.chargeMan" placeholder="请输入负责人" value="{{chargeMan}}" />
+        </view>
+      </view>
+
+      <view>
+        <button class="vBtn_ok" formType="submit" disabled="{{disabled}}">提交发布</button>
+      </view>
+
+    </form>
+  </view>
+</view>
